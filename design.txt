@@ -1,0 +1,26 @@
+STATES
+	FRIENDLY BOARD STATE
+		0=empty, 1=ship, 2=miss, 3=hit
+	ENEMY BOARD STATE
+		0=empty, 1=ship, 2=miss, 3=hit
+	PLAYER TURN STATE
+1 PLAYER BOARD COMPONENT
+	ENEMY BOARD COMPONENT
+		ENEMY SQUARE COMPONENTS
+			don't show ships
+			onClick update enemy board
+			onClick update turn state
+	if no more 1's exist on board -> return end game player turn -> else return board
+2 PLAYER BOARD COMPONENT
+	ENEMY BOARD COMPONENT
+		ENEMY SQUARE COMPONENTS
+			don't show ships
+			onClick update enemy board
+			onClick update turn state
+	FRIENDLY BOARD COMPONENT
+		FRIENDLY SQUARE COMPONENTS
+			show ships
+	if enemy turn -> hit random player square -> else player choose square
+	if no more 1's exist on board -> return end game player turn -> else return board
+
+* test turn state with multiple boards
