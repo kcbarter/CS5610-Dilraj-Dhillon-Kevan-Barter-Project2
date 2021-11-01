@@ -4,21 +4,23 @@ STATES
 	ENEMY BOARD STATE
 		0=empty, 1=ship, 2=miss, 3=hit
 	PLAYER TURN STATE
+
 1 PLAYER BOARD COMPONENT
 	ENEMY BOARD COMPONENT
 		ENEMY SQUARE COMPONENTS
 			don't show ships props
 			onClick update enemy board
 			onClick update turn state
-			onClick update counter state
+			don't allow reclick of same square
 	if no ships remain (1's) -> return end game -> else return board
+
 2 PLAYER BOARD COMPONENT
 	ENEMY BOARD COMPONENT
 		ENEMY SQUARE COMPONENTS
 			don't show ships
 			onClick update enemy board
 			onClick update turn state
-			onClick update counter state
+			don't allow reclick of same square
 	FRIENDLY BOARD COMPONENT
 		FRIENDLY SQUARE COMPONENTS
 			show ships props
