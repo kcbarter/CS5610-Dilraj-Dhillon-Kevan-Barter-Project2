@@ -2,30 +2,32 @@ import './Board.css'
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import FriendlyBoard from "./FriendlyBoard";
+import EnemyBoard from './EnemyBoard';
 
 export default function TwoPlayerBoard() {
     const playerTurnState = useSelector((state) => state.playerTurn);
 
     // AI logic
-    // const dispatch = useDispatch();
-    // if (playerTurnState === 0) {
-    //     dispatch(
-    //         {
-    //             type: 'boardClick',
-    //             x: 0,
-    //             y: 0,
-    //         }
-    //     );
-    //     dispatch(
-    //         {
-    //             type: 'updatePlayerTurn',
-    //         }
-    //     );
-    // }
+    const dispatch = useDispatch();
+    if (playerTurnState === 0) {
+        dispatch(
+            {
+                type: 'friendlyBoardClick',
+                x: 0,
+                y: 0,
+            }
+        );
+        dispatch(
+            {
+                type: 'updatePlayerTurn',
+            }
+        );
+    }
 
     return (
         <div>
             <h1>Turn: {playerTurnState}</h1>
+            <EnemyBoard />
             <FriendlyBoard />
         </div>
     )

@@ -6,7 +6,7 @@ STATES
 	PLAYER TURN STATE
 1 PLAYER BOARD COMPONENT
 	ENEMY BOARD COMPONENT
-		SQUARE COMPONENTS
+		ENEMY SQUARE COMPONENTS
 			don't show ships props
 			onClick update enemy board
 			onClick update turn state
@@ -14,13 +14,13 @@ STATES
 	if no ships remain (1's) -> return end game -> else return board
 2 PLAYER BOARD COMPONENT
 	ENEMY BOARD COMPONENT
-		SQUARE COMPONENTS
+		ENEMY SQUARE COMPONENTS
 			don't show ships
 			onClick update enemy board
 			onClick update turn state
 			onClick update counter state
 	FRIENDLY BOARD COMPONENT
-		SQUARE COMPONENTS
+		FRIENDLY SQUARE COMPONENTS
 			show ships props
 	if enemy turn -> hit random player square -> else player choose square
 	if no ships remain (1's) -> return end game -> else return board
