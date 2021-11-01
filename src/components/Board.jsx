@@ -5,7 +5,6 @@ import { useDispatch } from 'react-redux';
 
 export default function Board() {
     const boardState = useSelector((state) => state.game);
-    const countState = useSelector((state) => state.counter);
     const playerTurnState = useSelector((state) => state.playerTurn);
 
     const boardComponent = [];
@@ -26,20 +25,26 @@ export default function Board() {
         }
     }
 
-    // const dispatch = useDispatch();
-    // if (playerTurnState === 0) {
-    //     dispatch(
-    //         {
-    //             type: 'boardClick',
-    //             x: 0,
-    //             y: 0,
-    //         }
-    //     );
-    // }
+    const dispatch = useDispatch();
+    if (playerTurnState === 0) {
+        const pause = time => new Promise(resolve => setTimeout(resolve, time));
+        pause(2000);
+        dispatch(
+            {
+                type: 'boardClick',
+                x: 0,
+                y: 0,
+            }
+        );
+        dispatch(
+            {
+                type: 'updatePlayerTurn',
+            }
+        );
+    }
 
     return (
         <div>
-            <h1>Counter {countState}</h1>
             <h1>Turn: {playerTurnState}</h1>
             <div class="board">
                 {boardComponent}

@@ -19,12 +19,6 @@ export default function Square(props) {
         );
         dispatch(
             {
-                type: 'updateCounter',
-                clicked: clicked,
-            }
-        );
-        dispatch(
-            {
                 type: 'updatePlayerTurn',
             }
         );
