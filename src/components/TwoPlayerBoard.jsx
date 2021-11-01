@@ -30,7 +30,6 @@ export default function TwoPlayerBoard() {
             <div class='container'>
                 <EnemyBoard />
                 <FriendlyBoard />
-                hi there
             </div>
         </div>
     )
