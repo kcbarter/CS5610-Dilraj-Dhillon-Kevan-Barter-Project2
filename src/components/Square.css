@@ -1,0 +1,14 @@
+.square {
+    color: purple;
+    border: 4px solid gray;
+    height: 100px;
+    width: 100px;
+}
+
+.white {
+    background-color: white;
+}
+
+.black {
+    background-color: black;
+}
