@@ -7,8 +7,8 @@ STATES
 	SHIP COUNTER STATE
 1 PLAYER BOARD COMPONENT
 	ENEMY BOARD COMPONENT
-		ENEMY SQUARE COMPONENTS
-			don't show ships
+		SQUARE COMPONENTS
+			don't show ships property
 			onClick update enemy board
 			onClick update turn state
 			onClick update counter state
@@ -21,8 +21,8 @@ STATES
 			onClick update turn state
 			onClick update counter state
 	FRIENDLY BOARD COMPONENT
-		FRIENDLY SQUARE COMPONENTS
-			show ships
+		SQUARE COMPONENTS
+			show ships property
 	if enemy turn -> hit random player square -> else player choose square
 	if counter state === 0 -> return end game -> else return board
 
