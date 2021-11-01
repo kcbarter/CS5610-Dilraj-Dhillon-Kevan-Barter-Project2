@@ -5,6 +5,13 @@
     justify-content: center;
 }
 
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
 h1 {
     text-align: center;
 }

@@ -15,10 +15,8 @@ export default function FriendlyBoard() {
     }
 
     return (
-        <div>
-            <div class="board">
-                {boardComponent}
-            </div>
+        <div class='board'>
+            {boardComponent}
         </div>
     )
 }

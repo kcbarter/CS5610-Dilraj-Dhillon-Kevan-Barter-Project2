@@ -15,10 +15,8 @@ export default function EnemyBoard() {
     }
 
     return (
-        <div>
-            <div class="board">
-                {boardComponent}
-            </div>
+        <div class="board">
+            {boardComponent}
         </div>
     )
 }
