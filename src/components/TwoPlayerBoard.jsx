@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import FriendlyBoard from "./FriendlyBoard";
 
-export default function Board() {
+export default function TwoPlayerBoard() {
     const playerTurnState = useSelector((state) => state.playerTurn);
 
     // AI logic
