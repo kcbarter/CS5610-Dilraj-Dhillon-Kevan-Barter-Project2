@@ -12,7 +12,7 @@ export default function aiReducer(
 ) {
     if (action.type === 'aiNextChoice') {
         state = aiChoiceStack.pop();
-        return state;
+        return state !== undefined ? state : null;
     }
-    return state;
+    return state !== undefined ? state : null;
 }
