@@ -5,7 +5,14 @@ import './Square.css';
 export default function EnemySquare(props) {
     const squareState = props.squareState;
 
-    let backgroundColor = squareState === 0 ? 'white' : 'black';
+    let backgroundColor = 'blue';
+    if (squareState === 1) {
+        backgroundColor = 'blue';
+    } else if (squareState === 2) {
+        backgroundColor = 'green';
+    } else if (squareState === 3) {
+        backgroundColor = 'red';
+    }
 
     const dispatch = useDispatch();
 
