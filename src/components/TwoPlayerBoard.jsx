@@ -6,6 +6,7 @@ import EnemyBoard from './EnemyBoard';
 
 export default function TwoPlayerBoard() {
     const playerTurnState = useSelector((state) => state.playerTurn);
+    const boardState = useSelector((state) => state.friendlyBoard);
 
     // AI logic
     // const dispatch = useDispatch();
@@ -20,6 +21,7 @@ export default function TwoPlayerBoard() {
     //     dispatch(
     //         {
     //             type: 'updatePlayerTurn',
+    //             squareStateOfClicked: boardState[1][1],
     //         }
     //     );
     // }
