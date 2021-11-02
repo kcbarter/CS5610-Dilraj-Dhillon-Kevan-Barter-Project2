@@ -8,21 +8,21 @@ export default function TwoPlayerBoard() {
     const playerTurnState = useSelector((state) => state.playerTurn);
 
     // AI logic
-    const dispatch = useDispatch();
-    if (playerTurnState === 0) {
-        dispatch(
-            {
-                type: 'friendlyBoardClick',
-                x: 1,
-                y: 1,
-            }
-        );
-        dispatch(
-            {
-                type: 'updatePlayerTurn',
-            }
-        );
-    }
+    // const dispatch = useDispatch();
+    // if (playerTurnState === 0) {
+    //     dispatch(
+    //         {
+    //             type: 'friendlyBoardClick',
+    //             x: 1,
+    //             y: 1,
+    //         }
+    //     );
+    //     dispatch(
+    //         {
+    //             type: 'updatePlayerTurn',
+    //         }
+    //     );
+    // }
 
     return (
         <div>

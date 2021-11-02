@@ -27,6 +27,7 @@ export default function EnemySquare(props) {
         dispatch(
             {
                 type: 'updatePlayerTurn',
+                squareStateOfClicked: squareState,
             }
         );
     }
