@@ -6,9 +6,20 @@ import EnemyBoard from './EnemyBoard';
 
 export default function TwoPlayerBoard() {
     const playerTurnState = useSelector((state) => state.playerTurn);
-    const friendlyBoardState = useSelector((state) => state.friendlyBoard); // End game logic
+    const friendlyBoardState = useSelector((state) => state.friendlyBoard);
     const enemyBoardState = useSelector((state) => state.enemyBoard);
     const aiChoice = useSelector((state) => state.aiChoice);
+
+    // End game logic
+    let flag = 0;
+    for (let i = 0; i < friendlyBoardState.length; i++) {
+        let row = friendlyBoardState[i];
+        for (let j = 0; j < row.length; j++) {
+            if (friendlyBoardState[i][j] === 'ship') {
+                flag = 1;
+            }
+        }
+    }
 
     // AI logic
     const dispatch = useDispatch();
@@ -33,6 +44,11 @@ export default function TwoPlayerBoard() {
         );
     }
 
+    if (flag === 0) {
+        return (
+            <div>GAME OVER</div>
+        )
+    }
     return (
         <div>
             <h1>Turn: {playerTurnState}</h1>
