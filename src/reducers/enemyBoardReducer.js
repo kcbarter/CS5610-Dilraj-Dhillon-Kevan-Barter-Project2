@@ -1,6 +1,6 @@
 const defaultState = [
-    [1, 0],
-    [0, 0],
+    ['ship', 'empty'],
+    ['empty', 'empty'],
 ];
 
 export default function enemyBoardReducer(
@@ -8,10 +8,10 @@ export default function enemyBoardReducer(
 ) {
     if (action.type === 'enemyBoardClick') {
         const value = state[action.x][action.y];
-        if (value === 0) {
-            state[action.x][action.y] = 2; // Empty to miss
-        } else if (value === 1) {
-            state[action.x][action.y] = 3; // Ship location to hit
+        if (value === 'empty') {
+            state[action.x][action.y] = 'miss'; // Empty to miss
+        } else if (value === 'ship') {
+            state[action.x][action.y] = 'hit'; // Ship location to hit
         }
         return [...state];
     }

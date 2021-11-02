@@ -6,11 +6,11 @@ export default function EnemySquare(props) {
     const squareState = props.squareState;
 
     let backgroundColor = 'blue';
-    if (squareState === 1) {
+    if (squareState === 'ship') {
         backgroundColor = 'blue'; // Invisible ship
-    } else if (squareState === 2) {
+    } else if (squareState === 'miss') {
         backgroundColor = 'green';
-    } else if (squareState === 3) {
+    } else if (squareState === 'hit') {
         backgroundColor = 'red';
     }
 

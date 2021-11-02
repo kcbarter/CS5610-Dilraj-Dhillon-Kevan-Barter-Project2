@@ -21,7 +21,7 @@ export default function TwoPlayerBoard() {
     //     dispatch(
     //         {
     //             type: 'updatePlayerTurn',
-    //             squareStateOfClicked: boardState[1][1],
+    //             squareStateOfClicked: boardState[0][0], // Hacky to prevent infinite loop
     //         }
     //     );
     // }
