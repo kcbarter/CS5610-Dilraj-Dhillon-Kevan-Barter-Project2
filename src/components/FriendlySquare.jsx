@@ -6,7 +6,7 @@ export default function FriendlySquare(props) {
 
     let backgroundColor = 'blue';
     if (squareState === 1) {
-        backgroundColor = 'black';
+        backgroundColor = 'black'; // Visible ship
     } else if (squareState === 2) {
         backgroundColor = 'green';
     } else if (squareState === 3) {

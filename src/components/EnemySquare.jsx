@@ -7,7 +7,7 @@ export default function EnemySquare(props) {
 
     let backgroundColor = 'blue';
     if (squareState === 1) {
-        backgroundColor = 'blue';
+        backgroundColor = 'blue'; // Invisible ship
     } else if (squareState === 2) {
         backgroundColor = 'green';
     } else if (squareState === 3) {
