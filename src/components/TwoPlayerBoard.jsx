@@ -6,25 +6,32 @@ import EnemyBoard from './EnemyBoard';
 
 export default function TwoPlayerBoard() {
     const playerTurnState = useSelector((state) => state.playerTurn);
-    const boardState = useSelector((state) => state.friendlyBoard);
+    const friendlyBoardState = useSelector((state) => state.friendlyBoard); // End game logic
+    const enemyBoardState = useSelector((state) => state.enemyBoard);
+    const aiChoice = useSelector((state) => state.aiChoice);
 
     // AI logic
-    // const dispatch = useDispatch();
-    // if (playerTurnState === 0) {
-    //     dispatch(
-    //         {
-    //             type: 'friendlyBoardClick',
-    //             x: 1,
-    //             y: 1,
-    //         }
-    //     );
-    //     dispatch(
-    //         {
-    //             type: 'updatePlayerTurn',
-    //             squareStateOfClicked: boardState[0][0], // Hacky to prevent infinite loop
-    //         }
-    //     );
-    // }
+    const dispatch = useDispatch();
+    if (playerTurnState === 0) {
+        dispatch(
+            {
+                type: 'friendlyBoardClick',
+                x: aiChoice[0],
+                y: aiChoice[1],
+            }
+        );
+        dispatch(
+            {
+                type: 'aiNextChoice',
+            }
+        );
+        dispatch(
+            {
+                type: 'updatePlayerTurn',
+                squareStateOfClicked: 'empty', // Hacky to prevent infinite loop
+            }
+        );
+    }
 
     return (
         <div>
