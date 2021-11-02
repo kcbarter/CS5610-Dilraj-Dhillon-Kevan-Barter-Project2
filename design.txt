@@ -24,6 +24,6 @@ STATES
 	FRIENDLY BOARD COMPONENT
 		FRIENDLY SQUARE COMPONENTS
 			show ships props
-	if enemy turn -> hit random player square -> else player choose square
+	if enemy turn -> hit random player square and update player turn
 	if no ships remain (1's) -> return end game -> else return board
 	

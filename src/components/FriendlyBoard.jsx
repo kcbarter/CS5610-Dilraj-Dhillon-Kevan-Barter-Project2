@@ -10,7 +10,7 @@ export default function FriendlyBoard() {
     for (let i = 0; i < boardState.length; i++) {
         let row = boardState[i];
         for (let j = 0; j < row.length; j++) {
-            boardComponent.push((<FriendlySquare clicked={boardState[i][j]} x={i} y={j} />))
+            boardComponent.push((<FriendlySquare squareState={boardState[i][j]} x={i} y={j} />))
         }
     }
 

@@ -3,9 +3,9 @@ import { useDispatch } from 'react-redux';
 import './Square.css';
 
 export default function EnemySquare(props) {
-    const clicked = props.clicked;
+    const squareState = props.squareState;
 
-    let backgroundColor = clicked === 0 ? 'white' : 'black';
+    let backgroundColor = squareState === 0 ? 'white' : 'black';
 
     const dispatch = useDispatch();
 

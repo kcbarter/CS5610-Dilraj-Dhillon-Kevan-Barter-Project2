@@ -2,9 +2,9 @@ import React from 'react';
 import './Square.css';
 
 export default function FriendlySquare(props) {
-    const clicked = props.clicked;
+    const squareState = props.squareState;
 
-    let backgroundColor = clicked === 0 ? 'white' : 'black';
+    let backgroundColor = squareState === 0 ? 'white' : 'black';
 
     return (<div class={`square ${backgroundColor}`} ></div >);
 }
