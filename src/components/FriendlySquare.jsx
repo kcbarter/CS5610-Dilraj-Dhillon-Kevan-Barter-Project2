@@ -4,7 +4,14 @@ import './Square.css';
 export default function FriendlySquare(props) {
     const squareState = props.squareState;
 
-    let backgroundColor = squareState === 0 ? 'white' : 'black';
+    let backgroundColor = 'blue';
+    if (squareState === 1) {
+        backgroundColor = 'black';
+    } else if (squareState === 2) {
+        backgroundColor = 'green';
+    } else if (squareState === 3) {
+        backgroundColor = 'red';
+    }
 
     return (<div class={`square ${backgroundColor}`} ></div >);
 }
