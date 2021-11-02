@@ -9,9 +9,9 @@ export default function friendlyBoardReducer(
     if (action.type === 'friendlyBoardClick') {
         const value = state[action.x][action.y];
         if (value === 'empty') {
-            state[action.x][action.y] = 'miss'; // Empty to miss
+            state[action.x][action.y] = 'miss';
         } else if (value === 'ship') {
-            state[action.x][action.y] = 'hit'; // Ship location to hit
+            state[action.x][action.y] = 'hit';
         }
         return [...state];
     }
