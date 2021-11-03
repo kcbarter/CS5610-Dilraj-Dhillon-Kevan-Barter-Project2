@@ -1,7 +1,7 @@
 .board {
     display: grid;
-    grid-template-columns: repeat(2, 100px);
-    grid-template-rows: repeat(2, 100px);
+    grid-template-columns: repeat(9, 50px);
+    grid-template-rows: repeat(9, 50px);
     justify-content: center;
 }
 
@@ -10,6 +10,10 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.space {
+    width: 50px;
 }
 
 h1 {
