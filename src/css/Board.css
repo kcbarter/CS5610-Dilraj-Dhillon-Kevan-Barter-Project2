@@ -10,9 +10,11 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     gap: 50px;
+    height: 100%;
 }
 
-h1 {
-    text-align: center;
+.view {
+    height: 100vh;
 }

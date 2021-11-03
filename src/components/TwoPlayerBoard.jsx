@@ -66,8 +66,7 @@ export default function TwoPlayerBoard() {
     }
 
     return (
-        <div>
-            <h1>Turn: {playerTurnState}</h1>
+        <div class='view'>
             <div class='container'>
                 <EnemyBoard />
                 <FriendlyBoard />
