@@ -1,5 +1,5 @@
 const defaultState = [
-    ['ship', 'empty'],
+    ['empty', 'ship'],
     ['empty', 'ship'],
 ];
 

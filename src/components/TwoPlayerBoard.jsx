@@ -9,20 +9,39 @@ export default function TwoPlayerBoard() {
     const friendlyBoardState = useSelector((state) => state.friendlyBoard);
     const enemyBoardState = useSelector((state) => state.enemyBoard);
     const aiChoice = useSelector((state) => state.aiChoice);
+    const dispatch = useDispatch();
 
     // End game logic
-    let flag = 0;
+    let friendlyFlag = 0;
     for (let i = 0; i < friendlyBoardState.length; i++) {
         let row = friendlyBoardState[i];
         for (let j = 0; j < row.length; j++) {
             if (friendlyBoardState[i][j] === 'ship') {
-                flag = 1;
+                friendlyFlag = 1;
             }
         }
     }
+    if (friendlyFlag === 0) {
+        return (
+            <div>GAME OVER ENEMY WINS</div>
+        )
+    }
+    let enemyFlag = 0;
+    for (let i = 0; i < enemyBoardState.length; i++) {
+        let row = enemyBoardState[i];
+        for (let j = 0; j < row.length; j++) {
+            if (enemyBoardState[i][j] === 'ship') {
+                enemyFlag = 1;
+            }
+        }
+    }
+    if (enemyFlag === 0) {
+        return (
+            <div>GAME OVER FRIENDLY WINS</div>
+        )
+    }
 
     // AI logic
-    const dispatch = useDispatch();
     if (playerTurnState === 0) {
         dispatch(
             {
@@ -44,11 +63,6 @@ export default function TwoPlayerBoard() {
         );
     }
 
-    if (flag === 0) {
-        return (
-            <div>GAME OVER</div>
-        )
-    }
     return (
         <div>
             <h1>Turn: {playerTurnState}</h1>
