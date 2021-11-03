@@ -1,5 +1,5 @@
 import React from 'react';
-import './Square.css';
+import '../css/Square.css';
 
 export default function FriendlySquare(props) {
     const squareState = props.squareState;

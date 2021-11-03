@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import './Square.css';
+import '../css/Square.css';
 
 export default function EnemySquare(props) {
     const squareState = props.squareState;

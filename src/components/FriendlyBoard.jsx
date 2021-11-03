@@ -1,5 +1,5 @@
 import FriendlySquare from "./FriendlySquare"
-import './Board.css'
+import '../css/Board.css'
 import { useSelector } from 'react-redux';
 
 export default function FriendlyBoard() {

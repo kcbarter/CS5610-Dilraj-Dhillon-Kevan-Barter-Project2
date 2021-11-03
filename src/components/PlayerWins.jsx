@@ -1,4 +1,4 @@
-import './GameOver.css'
+import '../css/GameOver.css'
 
 export default function PlayerWins() {
     return (

@@ -1,4 +1,4 @@
-import './Board.css'
+import '../css/Board.css'
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import FriendlyBoard from "./FriendlyBoard";
