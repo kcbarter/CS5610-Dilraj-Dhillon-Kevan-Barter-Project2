@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
 import FriendlyBoard from "./FriendlyBoard";
 import EnemyBoard from './EnemyBoard';
+import PlayerWins from './PlayerWins';
+import EnemyWins from './EnemyWins'
 
 export default function TwoPlayerBoard() {
     const playerTurnState = useSelector((state) => state.playerTurn);
@@ -23,7 +25,7 @@ export default function TwoPlayerBoard() {
     }
     if (friendlyFlag === 0) {
         return (
-            <div>GAME OVER ENEMY WINS</div>
+            <EnemyWins />
         )
     }
     let enemyFlag = 0;
@@ -37,7 +39,7 @@ export default function TwoPlayerBoard() {
     }
     if (enemyFlag === 0) {
         return (
-            <div>GAME OVER FRIENDLY WINS</div>
+            <PlayerWins />
         )
     }
 
