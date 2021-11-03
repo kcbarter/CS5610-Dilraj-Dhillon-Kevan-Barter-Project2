@@ -8,18 +8,34 @@
     opacity: 0.75;
 }
 
-.black {
-    background-color: black;
-}
-
-.blue {
+.empty {
     background-color: blue;
 }
 
-.green {
+.emptyEnemy {
+    background-color: blue;
+}
+
+.ship {
+    background-color: black;
+}
+
+.shipEnemy {
+    background-color: blue;
+}
+
+.miss {
     background-color: green;
 }
 
-.red {
+.missEnemy {
+    background-color: green;
+}
+
+.hit {
+    background-color: red;
+}
+
+.hitEnemy {
     background-color: red;
 }

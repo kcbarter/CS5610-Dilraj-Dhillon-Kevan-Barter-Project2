@@ -5,15 +5,6 @@ import '../css/Square.css';
 export default function EnemySquare(props) {
     const squareState = props.squareState;
 
-    let backgroundColor = 'blue';
-    if (squareState === 'ship') {
-        backgroundColor = 'blue'; // Invisible ship
-    } else if (squareState === 'miss') {
-        backgroundColor = 'green';
-    } else if (squareState === 'hit') {
-        backgroundColor = 'red';
-    }
-
     const dispatch = useDispatch();
 
     return (<div onClick={() => {
@@ -31,5 +22,5 @@ export default function EnemySquare(props) {
             }
         );
     }
-    } class={`square ${backgroundColor}`} ></div >);
+    } class={`square ${squareState}Enemy`} ></div >);
 }
