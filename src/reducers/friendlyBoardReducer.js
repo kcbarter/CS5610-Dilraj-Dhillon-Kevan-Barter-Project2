@@ -1,13 +1,13 @@
 const defaultState = [
     ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
     ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
+    ['ship', 'ship', 'ship', 'ship', 'empty', 'empty', 'empty', 'empty', 'empty'],
     ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
-    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
-    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
-    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
-    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
-    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'ship', 'empty', 'empty'],
-    ['empty', 'empty', 'empty', 'empty', 'ship', 'empty', 'ship', 'empty', 'empty'],
+    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'ship'],
+    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'ship'],
+    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'ship'],
+    ['ship', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'ship'],
+    ['ship', 'empty', 'empty', 'empty', 'ship', 'ship', 'ship', 'empty', 'ship'],
 ];
 
 export default function friendlyBoardReducer(

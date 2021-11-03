@@ -1,3 +1,13 @@
+# Grid Sizing
+
+Change the following files if you want to change the number of grids and their size:
+
+* Board.css
+* Square.css
+* friendlyBoardReducer.js
+* enemyBoardReducer.js
+* aiReducer.js
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

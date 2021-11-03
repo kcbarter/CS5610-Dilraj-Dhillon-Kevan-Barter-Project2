@@ -1,13 +1,13 @@
 const defaultState = [
+    ['ship', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'ship', 'ship'],
     ['ship', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
+    ['ship', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
+    ['ship', 'empty', 'empty', 'empty', 'empty', 'ship', 'empty', 'empty', 'empty'],
+    ['ship', 'empty', 'empty', 'empty', 'empty', 'ship', 'empty', 'empty', 'empty'],
+    ['empty', 'empty', 'empty', 'empty', 'empty', 'ship', 'empty', 'empty', 'empty'],
     ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
     ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
-    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
-    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
-    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
-    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
-    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
-    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
+    ['empty', 'empty', 'empty', 'empty', 'ship', 'ship', 'ship', 'ship', 'empty'],
 ];
 
 export default function enemyBoardReducer(
