@@ -10,10 +10,7 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-.space {
-    width: 50px;
+    gap: 50px;
 }
 
 h1 {
