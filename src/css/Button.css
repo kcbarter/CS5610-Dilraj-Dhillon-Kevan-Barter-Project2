@@ -8,5 +8,10 @@
 }
 
 .linkButton{
-    
+    background-color: goldenrod;
+    color: black;
+    font-weight: bold;
+    font-size: 30px;
+    height: 50px;
+    width: 250px;
 }
