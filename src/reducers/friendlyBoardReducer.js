@@ -10,6 +10,18 @@ const defaultState = [
     ['ship', 'empty', 'empty', 'empty', 'ship', 'ship', 'ship', 'empty', 'ship'],
 ];
 
+const initialState = [
+    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
+    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
+    ['ship', 'ship', 'ship', 'ship', 'empty', 'empty', 'empty', 'empty', 'empty'],
+    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
+    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'ship'],
+    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'ship'],
+    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'ship'],
+    ['ship', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'ship'],
+    ['ship', 'empty', 'empty', 'empty', 'ship', 'ship', 'ship', 'empty', 'ship'],
+];
+
 export default function friendlyBoardReducer(
     state = defaultState, action
 ) {
@@ -20,6 +32,11 @@ export default function friendlyBoardReducer(
         } else if (value === 'ship') {
             state[action.x][action.y] = 'hit';
         }
+        return [...state];
+    }
+    if (action.type === 'resetBoard') {
+        let tmp = initialState.map(inner => inner.slice());
+        state = tmp;
         return [...state];
     }
     return state;

@@ -4,7 +4,8 @@ import { useDispatch } from 'react-redux';
 import FriendlyBoard from "./FriendlyBoard";
 import EnemyBoard from './EnemyBoard';
 import PlayerWins from './PlayerWins';
-import EnemyWins from './EnemyWins'
+import EnemyWins from './EnemyWins';
+import ResetButton from './ResetButton';
 
 export default function TwoPlayerBoard() {
     const playerTurnState = useSelector((state) => state.playerTurn);
@@ -67,6 +68,7 @@ export default function TwoPlayerBoard() {
 
     return (
         <div class='view'>
+            <ResetButton />
             <div class='container'>
                 <EnemyBoard />
                 <FriendlyBoard />
