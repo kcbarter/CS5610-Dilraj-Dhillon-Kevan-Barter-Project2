@@ -13,5 +13,5 @@ export default function ResetButton() {
             }
         );
     }
-    } class='reset'> RESET</button >);
+    } class='reset'>RESET</button >);
 }
