@@ -1,3 +1,4 @@
+import '../css/Button.css';
 import React from 'react';
 import { useDispatch } from 'react-redux';
 
@@ -12,5 +13,5 @@ export default function ResetButton() {
             }
         );
     }
-    } >RESET</button >);
+    } class='reset'> RESET</button >);
 }

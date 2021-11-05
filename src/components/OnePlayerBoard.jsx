@@ -2,6 +2,7 @@ import '../css/Board.css'
 import { useSelector } from 'react-redux';
 import EnemyBoard from './EnemyBoard';
 import PlayerWins from './PlayerWins';
+import ResetButton from './ResetButton';
 
 export default function OnePlayerBoard() {
     const enemyBoardState = useSelector((state) => state.enemyBoard);
@@ -24,6 +25,7 @@ export default function OnePlayerBoard() {
 
     return (
         <div class='view'>
+            <div class='buttonContainer'><ResetButton /></div>
             <div class='container'>
                 <EnemyBoard />
             </div>

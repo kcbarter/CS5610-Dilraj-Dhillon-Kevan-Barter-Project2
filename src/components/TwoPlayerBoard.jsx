@@ -68,7 +68,7 @@ export default function TwoPlayerBoard() {
 
     return (
         <div class='view'>
-            <ResetButton />
+            <div class='buttonContainer'><ResetButton /></div>
             <div class='container'>
                 <EnemyBoard />
                 <FriendlyBoard />
