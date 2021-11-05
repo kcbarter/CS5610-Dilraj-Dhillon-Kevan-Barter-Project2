@@ -25,6 +25,11 @@ export default function TwoPlayerBoard() {
         }
     }
     if (friendlyFlag === 0) {
+        dispatch(
+            {
+                type: 'resetBoard',
+            }
+        );
         return (
             <EnemyWins />
         )
@@ -39,6 +44,11 @@ export default function TwoPlayerBoard() {
         }
     }
     if (enemyFlag === 0) {
+        dispatch(
+            {
+                type: 'resetBoard',
+            }
+        );
         return (
             <PlayerWins />
         )
