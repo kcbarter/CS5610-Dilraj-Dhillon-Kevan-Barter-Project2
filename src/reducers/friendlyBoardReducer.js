@@ -1,31 +1,48 @@
+const shipLengths = [5, 4, 3, 3, 2];
+
 const defaultState = [
-    ['empty', 'empty', 'empty', 'ship', 'ship', 'ship', 'empty', 'empty', 'empty', 'empty'],
     ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
-    ['empty', 'ship', 'ship', 'ship', 'ship', 'empty', 'empty', 'empty', 'empty', 'empty'],
     ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
-    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'ship'],
-    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'ship'],
-    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'ship'],
-    ['empty', 'ship', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'ship'],
-    ['empty', 'ship', 'empty', 'empty', 'empty', 'ship', 'ship', 'ship', 'empty', 'ship'],
+    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
+    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
+    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
+    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
+    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
+    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
+    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
     ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
 ];
 
-const initialState = [
-    ['empty', 'empty', 'empty', 'ship', 'ship', 'ship', 'empty', 'empty', 'empty', 'empty'],
-    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
-    ['empty', 'ship', 'ship', 'ship', 'ship', 'empty', 'empty', 'empty', 'empty', 'empty'],
-    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
-    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'ship'],
-    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'ship'],
-    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'ship'],
-    ['empty', 'ship', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'ship'],
-    ['empty', 'ship', 'empty', 'empty', 'empty', 'ship', 'ship', 'ship', 'empty', 'ship'],
-    ['empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty', 'empty'],
-];
+function randomizeBoard(emptyArray, shipsArray) {
+    const randomizedBoard = emptyArray.map(inner => inner.slice());
+
+    for (let shipLength of shipsArray) {
+        let row = Math.floor(Math.random() * 10);
+        let col = Math.floor(Math.random() * 10);
+        const BOUNDARY = 10;
+        let boundaryFlag = 1;
+        while (boundaryFlag === 1) {
+            boundaryFlag = 0;
+            for (let i = col; i < col + shipLength; i++) {
+                if (i === BOUNDARY || randomizedBoard[row][i] === 'ship') {
+                    boundaryFlag = 1;
+                    break;
+                }
+            }
+            if (boundaryFlag === 0) {
+                break;
+            }
+            row = Math.floor(Math.random() * 10);
+            col = Math.floor(Math.random() * 10);
+        }
+
+        randomizedBoard[row].fill('ship', col, col + shipLength);
+    }
+    return randomizedBoard;
+}
 
 export default function friendlyBoardReducer(
-    state = defaultState, action
+    state = randomizeBoard(defaultState, shipLengths), action
 ) {
     if (action.type === 'friendlyBoardClick') {
         const value = state[action.x][action.y];
@@ -37,8 +54,7 @@ export default function friendlyBoardReducer(
         return [...state];
     }
     if (action.type === 'reset') {
-        let tmp = initialState.map(inner => inner.slice());
-        state = tmp;
+        state = randomizeBoard(defaultState, shipLengths);
         return [...state];
     }
     return state;
