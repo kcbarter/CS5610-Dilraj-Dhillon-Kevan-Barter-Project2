@@ -1,9 +1,11 @@
 import '../css/GameOver.css'
+import ResetButton from './ResetButton'
 
 export default function PlayerWins() {
     return (
-        <h1 class='endGameHeader'>
-            GAME OVER PLAYER WINS!!!!!!
-        </h1>
+        <div class='endGameHeader'>
+            <h1>GAME OVER PLAYER WINS!!!!!!</h1>
+            <ResetButton />
+        </div>
     )
 }
