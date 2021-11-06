@@ -9,7 +9,7 @@ export default function ResetButton() {
     return (<button onClick={() => {
         dispatch(
             {
-                type: 'resetBoard',
+                type: 'reset',
             }
         );
     }

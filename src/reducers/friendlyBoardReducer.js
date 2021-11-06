@@ -36,7 +36,7 @@ export default function friendlyBoardReducer(
         }
         return [...state];
     }
-    if (action.type === 'resetBoard') {
+    if (action.type === 'reset') {
         let tmp = initialState.map(inner => inner.slice());
         state = tmp;
         return [...state];
