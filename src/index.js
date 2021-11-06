@@ -18,13 +18,12 @@ ReactDOM.render(
     <Router>
       <Navbar />
       <Routes>
-        <Route path="/" element={<HomePage />}/>
-        <Route path="/free_play" element={<OnePlayerBoard />}/>
-        <Route path="/normal_play" element={<TwoPlayerBoard />}/>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/free_play" element={<OnePlayerBoard />} />
+        <Route path="/normal_play" element={<TwoPlayerBoard />} />
         <Route path="/rules" element={<Rules />} />
       </Routes>
     </Router>
-    {/* <OnePlayerBoard /> */}
   </Provider>,
   document.getElementById('root')
 );

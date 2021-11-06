@@ -1,6 +1,6 @@
 const aiChoiceStack = [];
-for (let i = 0; i < 9; i++) {
-    for (let j = 0; j < 9; j++) {
+for (let i = 0; i < 10; i++) {
+    for (let j = 0; j < 10; j++) {
         aiChoiceStack.push([i, j]);
     }
 }
