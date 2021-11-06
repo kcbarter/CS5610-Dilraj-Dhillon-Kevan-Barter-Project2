@@ -6,5 +6,8 @@ export default function playerTurnReducer(
             state = state === 1 ? 0 : 1;
         }
     }
+    if(action.type === 'reset'){
+        state = 1;
+    }
     return state;
 }

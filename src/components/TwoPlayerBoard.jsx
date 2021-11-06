@@ -11,7 +11,6 @@ export default function TwoPlayerBoard() {
     const playerTurnState = useSelector((state) => state.playerTurn);
     const friendlyBoardState = useSelector((state) => state.friendlyBoard);
     const enemyBoardState = useSelector((state) => state.enemyBoard);
-    const aiChoice = useSelector((state) => state.aiChoice);
     const dispatch = useDispatch();
 
     // End game logic
@@ -46,16 +45,17 @@ export default function TwoPlayerBoard() {
 
     // AI logic
     if (playerTurnState === 0) {
+        let x = Math.floor(Math.random() * 10);
+        let y = Math.floor(Math.random() * 10);
+        while(friendlyBoardState[x][y] === 'hit' || friendlyBoardState[x][y] === 'miss'){
+            x = Math.floor(Math.random() * 10);
+            y = Math.floor(Math.random() * 10);
+        }
         dispatch(
             {
                 type: 'friendlyBoardClick',
-                x: aiChoice[0],
-                y: aiChoice[1],
-            }
-        );
-        dispatch(
-            {
-                type: 'aiNextChoice',
+                x: x,
+                y: y,
             }
         );
         dispatch(
