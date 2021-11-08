@@ -14,9 +14,13 @@ const defaultState = [
 ];
 
 function randomizeBoard(emptyArray, shipsArray) {
-    const randomizedBoard = emptyArray.map(inner => inner.slice());
+    let randomizedBoard = emptyArray.map(inner => inner.slice());
 
     for (let shipLength of shipsArray) {
+        const tranposeBoard = Math.floor(Math.random() * 2);
+        if (tranposeBoard === 1) {
+            randomizedBoard = transpose(randomizedBoard);
+        }
         let row = Math.floor(Math.random() * 10);
         let col = Math.floor(Math.random() * 10);
         const BOUNDARY = 10;
@@ -39,6 +43,10 @@ function randomizeBoard(emptyArray, shipsArray) {
         randomizedBoard[row].fill('ship', col, col + shipLength);
     }
     return randomizedBoard;
+}
+
+function transpose(matrix) {
+    return matrix[0].map((col, i) => matrix.map(row => row[i]));
 }
 
 export default function enemyBoardReducer(
